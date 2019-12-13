@@ -44,6 +44,10 @@ It is therefore clear that the major networks need to take action to improve the
 
 ### Twitter as a Platform for Customer Support
 
+Alongside this story of low 
+
+![Customer Service on Twitter](https://github.com/isobeldaley/categorising-tweets/blob/master/images/customer_service_on_twitter.png)
+
 
 ## Business Case
 
@@ -54,6 +58,7 @@ It is therefore clear that the major networks need to take action to improve the
 ## Summary of Results
 
 
+## Future Work
 
 
 
