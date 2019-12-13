@@ -83,7 +83,7 @@ The **OSEMN framework** has been used to structure this project.  This approach 
 
 The following five subsections summarise the approach to each stage.  For each section, a link is provided to an annotated Jupyter workbook in which more detail can be found. 
 
-### Obtain Data [link](https://github.com/isobeldaley/categorising-tweets/blob/master/Step%201%20-%20Obtain%20Data.ipynb)
+### [Obtain Data](https://github.com/isobeldaley/categorising-tweets/blob/master/Step%201%20-%20Obtain%20Data.ipynb)
 
 The Twitter API was used to obtain data.  
 
