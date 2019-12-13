@@ -81,19 +81,48 @@ The **OSEMN framework** has been used to structure this project.  This approach 
 4. **M**odel Data
 5. i**N**terpret Results
 
-The following five subsections summarise the approach to each stage.  For each section, a link is provided to an annotated Jupyter workbook in which more detail can be found. 
+The following five subsections summarise the approach to each stage.  Each section heading is a link to an annotated Jupyter workbook in which more detail can be found. 
 
 ### [Obtain Data](https://github.com/isobeldaley/categorising-tweets/blob/master/Step%201%20-%20Obtain%20Data.ipynb)
 
-The Twitter API was used to obtain data.  
+The Twitter API was used to obtain data.  The API was accessed using Tweepy, a Python library built to facilitate interaction with Twitter.  Using this approach, Tweets directed at each of the four manjor networks were obtained for the preceding 7 days.  This yielded 16,145 tweets.  
 
-### Scrub Data
+To progress with a supervised learning approach, a significant number of these tweets had to be labelled.  As such, the tweets were exported to Excel, where 4,377 of the tweets were categorised, according to their subject, into one of seven groups:
+
+- **Network**: tweets related to signal/coverage
+- **Customer Service**: tweets related to level of service received
+- **Device**: tweets related to  a device (e.g. phone, tablet, smart watch etc.)
+- **Contract**:tweets related to a contract question(e.g. "How do I terminate my contract?", "How can I add data to my allowance?" etc.) 
+- **Broadband**:tweets related to Broadband provision by the mobile network operator
+- **Promotion**: tweets related to a promotion being run by the operator (or their associates)
+- **Other**: tweets that could not be classified into any of the above groups
+
+It is important to note that labelling tweets is not an exact science.  It was not always obvious how to categorise every tweet, and sometimes a close call had to be made.  However, this is to be expected of real world, messy data.  
+
+
+### [Scrub Data](https://github.com/isobeldaley/categorising-tweets/blob/master/Step%202%20-%20Scrub%20Data.ipynb)
+
+The next step is to 'clean' the data in order to ensure that it is in a standardized format, with no missing or erroneous values. This involved:
+
+- **Handling missing values**: A single missing value (blank tweet) was identified.  Since this represented such a tiny fraction of the overall dataset, and it was not possible to sensibly replace the contents of a blank tweet, it was dropped.  
+
+- **Deleting Retweets**: Retweets can be construed as duplicate data.  These were therefore be dropped from the dataset by identifying all tweets that started with the letters "RT".  
+
+- **Calculating Sentiment using Text Blob**: An important part of our analysis involved understanding the sentiment behind each tweet.  For this task, TextBlob was used.  TextBlob is a simple Python library capable of assigning a sentiment score based on language used.  
+
+- **Remove Stopwords**: Stopwords are very commonly used words that add little meaning to a phrase or sentence (e.g. a, the, we etc.).  As such, to enhance the performance of an NLP model, they were filtered out using the standard list of English stopwords helpd by the NLTK library.
+
+- **Remove Links & Twitter Handles**: Both links and Twitter handles were removed, using the regular expressions library, as they add little meaning to a Tweet.  
+
+- **Tokenize & Lemmatize**: Each tweet was broken into tokens.  Each token (word) was lemmatized.  
+
+- **Split into labelled and unlabelled**: Finally data was split into labelled and unlabelled Tweets, and saved to separate Pandas DataFrames using Pickle.  
 
 ### Explore Data
 
 ### Model Data
 
-### Interpret
+### Interpret Results
 
 
 ## Summary of Results
@@ -103,6 +132,8 @@ The Twitter API was used to obtain data.
 
 
 ## Technical Requirements
+
+### Tweets & Replies
 
 ## Footnotes
 1. Figures taken from 2019 report published by Statista: https://www.statista.com/statistics/375986/market-share-held-by-mobile-phone-operators-united-kingdom-uk/
