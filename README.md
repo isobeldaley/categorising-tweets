@@ -208,9 +208,44 @@ Having run each model, it was determined that the multinomial logistic regressio
 
 ## Technical Requirements
 
+This section will guide you through the technical requirements that will need to be fulfilled, before running this project on your machine.
+
+Before getting started, you will need to have Python installed on your machine. We recommend using Anaconda for this purpose, as it is delivered with more than 1,500 packages/libraries pre-installed.
+
+### Libraries
+To run these projects, you will first need to install the following libraries. If you have chosen to run Python through Anaconda, many of the the libaries will already be available, and there will be no need to install them individualls.  These are highlighted below.
+
+**Libraries available through Anaconda**
+
+- **json**: Required to import user credentials for Twitter API
+- **Pandas**: Used for data manipulation and analysis
+- **Numpy**: Supports multi-dimensional matrices and arrays, provides a large number of mathematical functions
+- **Matplotlib**: A 2D graphical plotting library
+- **Seaborn**: Another data visualisation libary, based on Matplotlib
+- **Sklearn**: Provides tools for data analysis
+- **xgboost**: Enables use of the XG Boost weak learner algorithm
+- **pickle**: Allows Python objects to be saved for later use, and retrieved
+- **nltk**: A leading Python library for Natural Language Processing (NLP) tasks
+- **re**: Used to identify and handle 'regular expressions'
+
+**Libraries that may need to be individually installed**
+
+- **tweepy**: Required to interact with Twitter API
+- **TextBlob**: Used for sentiment analysis
+- **Plotly**: An alternative data visulalisation library, allowing a greater degree of intetraction with plots
+
+### Forking & Cloning the Repository onto your Local Machine
+
+1. Within Github, click 'Fork'
+2. Once Forked, copy the link https://github.com/[YOUR NAME]/categorising-tweets
+3. Open the command line and navigate to the folder you wish to save the projec to
+4. Type 'git clone https://github.com/[YOUR NAME]/categorising-tweets
+5. Open a new command line window, type 'jupyter notebook'
+6. A Jupyter notebook will open. Navitage to the folder in which your project is located, open the Jupyter notebook. You are ready to get started.
+
 ## Footnotes
 1. Figures taken from 2019 report published by Statista: https://www.statista.com/statistics/375986/market-share-held-by-mobile-phone-operators-united-kingdom-uk/
 
 2. Results from the Which Survey can be found here: https://www.simplybusiness.co.uk/knowledge/articles/2019/05/best-and-worst-mobile-networks-in-the-uk-2019/
 
-3.  https://blog.twitter.com/en_gb/a/en-gb/2016/customer-service-on-twitter-and-the-impact-on-brands.html
+3. Blog published by Twitter on research into impact of Twitter on customer service: https://blog.twitter.com/en_gb/a/en-gb/2016/customer-service-on-twitter-and-the-impact-on-brands.html
