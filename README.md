@@ -118,7 +118,13 @@ The next step is to 'clean' the data in order to ensure that it is in a standard
 
 - **Split into labelled and unlabelled**: Finally data was split into labelled and unlabelled Tweets, and saved to separate Pandas DataFrames using Pickle.  
 
-### Explore Data
+### [Explore Data](https://github.com/isobeldaley/categorising-tweets/blob/master/Step%203%20-%20Explore%20Data.ipynb)
+
+To ensure an in-depth understanding of the data, the next step was Exploratory Data Analysis (EDA).  The objective of this task was to understand the distribution of tweets, by subject (e.g. network, customer service etc.) and sentiment.
+
+#### Distribution of Tweets by Network
+
+![Distribution of Tweets by Network]()
 
 ### Model Data
 
@@ -131,9 +137,11 @@ The next step is to 'clean' the data in order to ensure that it is in a standard
 ## Future Work
 
 
-## Technical Requirements
+### Labelling
 
 ### Tweets & Replies
+
+## Technical Requirements
 
 ## Footnotes
 1. Figures taken from 2019 report published by Statista: https://www.statista.com/statistics/375986/market-share-held-by-mobile-phone-operators-united-kingdom-uk/
