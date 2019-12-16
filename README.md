@@ -120,24 +120,45 @@ The next step is to 'clean' the data in order to ensure that it is in a standard
 
 ### [Explore Data](https://github.com/isobeldaley/categorising-tweets/blob/master/Step%203%20-%20Explore%20Data.ipynb)
 
-To ensure an in-depth understanding of the data, the next step was Exploratory Data Analysis (EDA).  The objective of this task was to understand the distribution of tweets, by subject (e.g. network, customer service etc.) and sentiment.
+To ensure an in-depth understanding of the data, the next step was Exploratory Data Analysis (EDA).  The objective of this task was to understand the distribution of tweets, by subject (e.g. network, customer service etc.) and sentiment.  Exploratory data analysis was performed using the labelled observations only.  
 
 #### Distribution of Tweets by Network
 
+As a starting point, the distribution of tweets across each network was checked.  
+
 ![Distribution of Tweets by Network](https://github.com/isobeldaley/categorising-tweets/blob/master/images/number_of_tweets_by_network.png)
+
+As the chart above shows, the number of tweets varies from around 850 (EE) to around 1300 (O2).  It is important to note that every single EE tweet was labelled.   Therefore the low number of tweets attributable to EE is likely a consequence of their customers being less active on Twitter.  In contrast, the Twitter API yielded thousands of tweets for each of the remaining networks.  It was therefore possible to ensure that Threee, O2 and Vodafone each had at least 1000 labelled tweets in the dataset.  
 
 #### Distribution of Sentiment by Network
 
+Next, the distribution of sentiment across the networks was scrutinised.  As explained above, each tweet had been assigned a sentiment rating by TextBlob.  The sentiment rating can assume a value between -1 (negative) and +1 (positive).  
+
 ![Distribution of Sentiment by Network](https://github.com/isobeldaley/categorising-tweets/blob/master/images/distribution_of_sentiment_by_network.png)
+
+The chart above shows that the median sentiment for all networks is 0.  However, it is important to note that the lower and upper fence for Vodafone is notably lower than any of the other networks.  This indicates a greater lack of satisfaction with Vodafone on Twitter.  This is consistent with the *Which?* rankings in which Vodafone scored a one-star rating for each of customer service, value for money and technical support.  In contrast, EE and O2 appear to perform better on this measure.
 
 #### Distribution of Subject by Network
 
+The distribution of tweets by subject was also reviewed.  For clarity, a radial plot was used for this task.  
+
 ![Distribution of Subject by Network](https://github.com/isobeldaley/categorising-tweets/blob/master/images/proportion_of_tweets_subject.png)
 
+The chart above illustrates the following:
+
+- Vodafone appears to have the greatest proportion of tweets relating to customer service.  
+- Network issues are most prevalent with O2 (followed closely by Three)
+- A large proportion of tweets are classified as *Other*.  This may suggest that a finer degree of categorisation is required.  This should be considered during further work on this area.
 
 #### 20 Most Common Bigrams by Network
 
+Finally, the 20 most frequently used bigrams (pairs of words) were identified.  These were used to a more detailed indication of the topics customers were tweeting about.  
+
 ![20 Most Common Bigrams by Network](https://github.com/isobeldaley/categorising-tweets/blob/master/images/20_most_common_bigrams.png)
+
+It is clear for the above, that for every network, the phrase 'customer service' tops the list of most frequently used bigrams.  However, the frequency with which this phrase is used is highest for Vodafone.   Many of the other bigrams in the Vodafone chart also hint at poor customer service.  These include 'hold hour', 'still waiting' and 'trying get'.  All suggest that Vodafone are perhaps unresponsive. It seems to be a similar story for Three.  
+
+In contrast, the bigrams for EE and O2 suggest that many questions relate to network promotions/benefits (e.g. 'amazon prime', 'swappable benefit' and 'priority ticket'.  
 
 ### Model Data
 
