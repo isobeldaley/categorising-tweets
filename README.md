@@ -124,7 +124,20 @@ To ensure an in-depth understanding of the data, the next step was Exploratory D
 
 #### Distribution of Tweets by Network
 
-![Distribution of Tweets by Network]()
+![Distribution of Tweets by Network](https://github.com/isobeldaley/categorising-tweets/blob/master/images/number_of_tweets_by_network.png)
+
+#### Distribution of Sentiment by Network
+
+![Distribution of Sentiment by Network](https://github.com/isobeldaley/categorising-tweets/blob/master/images/distribution_of_sentiment_by_network.png)
+
+#### Distribution of Subject by Network
+
+![Distribution of Subject by Network](https://github.com/isobeldaley/categorising-tweets/blob/master/images/proportion_of_tweets_subject.png)
+
+
+#### 20 Most Common Bigrams by Network
+
+![20 Most Common Bigrams by Network](https://github.com/isobeldaley/categorising-tweets/blob/master/images/20_most_common_bigrams.png)
 
 ### Model Data
 
