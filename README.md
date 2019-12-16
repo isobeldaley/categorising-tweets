@@ -191,7 +191,7 @@ Each model was created using the two datasets specified above:
 
 #### Results
 
-
+Having run each model, it was determined that the multinomial logistic regression offered the most balanced performance.  That is it exhibited reasonable accuracy, reasonable balance between precision (risk of false positives) and recall (risk of false negatives) and suffered less from overfitting in comparison to a number of the other models.
 
 ### Interpret Results
 
