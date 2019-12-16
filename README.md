@@ -160,7 +160,38 @@ It is clear for the above, that for every network, the phrase 'customer service'
 
 In contrast, the bigrams for EE and O2 suggest that many questions relate to network promotions/benefits (e.g. 'amazon prime', 'swappable benefit' and 'priority ticket'.  
 
-### Model Data
+### [Model Data](https://github.com/isobeldaley/categorising-tweets/blob/master/Step%204%20-%20Model%20Data.ipynb)
+
+#### Final Pre-Processing Steps
+
+Before creating models to categorise tweets by subject, the following steps were undertaken:
+
+- Data was split into a training and test set.  This was to ensure that the models do not suffer from overfitting, and can be generalised to new (test) data.
+- Data was vectorized in two different ways.  These methods were then compared for performance when running alternative machine learning algorithms:
+
+    - **Count Vectorization**, which simply counts the number of times a word appears in a tweet and uses this as its weight.
+
+    - **TF-IDF Vectorization**, which evaulates how important a specified word is in a tweet.  This works by increasing the importance of a word in proportion to the number of times it appears in a particular tweet, but reducing the importance of that word by the frequency the word appears in the entire dataset of tweets.  In this way, it helps the algorithm determine which words are key to categorising a given tweet.  
+    
+#### Classification Models
+
+A number of different classification models were assessed for their suitability for the task of predicting the category a given tweet relates to.  These are:
+
+- K Nearest Neighbours
+- Naive Multinomial Bayes Classifier
+- Multinomial Logistic Regression
+- Random Forest Classifier
+- XG Boost
+- Support Vector Machine (SVM)
+
+Each model was created using the two datasets specified above:
+
+- Dataset transformed by tf-idf vectorization
+- Dataset transformed by count vectorization
+
+#### Results
+
+
 
 ### Interpret Results
 
