@@ -196,7 +196,17 @@ Having run each model, it was determined that the multinomial logistic regressio
 ### Interpret Results
 
 
-## Summary of Results
+## Recommendations
+
+Having demonstrated its potential, we recommend that this model is used in the following ways:
+
+1. To pre-categorize tweets.  This will enable all questions/issues to be directed to the correct person/department and handled efficiently.
+
+2. To provide a measure of the proportion of tweets relating to each subject category.  This will help mobile network operators to quickly identify and address specific (e.g. persistent problems with customer service, or poor network coverage).
+
+3.  To provide an on-the pulse measure of customer satisfaction, by considering the distribution of sentiment ratings.
+
+This approach will enable more effective management of customer communications via social media, rapid assessment of customer sentiment/issues.
 
 
 ## Future Work
@@ -205,6 +215,8 @@ Having run each model, it was determined that the multinomial logistic regressio
 ### Labelling
 
 ### Tweets & Replies
+
+### Sentiment Analysis
 
 ## Technical Requirements
 
