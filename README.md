@@ -193,8 +193,29 @@ Each model was created using the two datasets specified above:
 
 Having run each model, it was determined that the multinomial logistic regression offered the most balanced performance.  That is it exhibited reasonable accuracy, reasonable balance between precision (risk of false positives) and recall (risk of false negatives) and suffered less from overfitting in comparison to a number of the other models.
 
-### Interpret Results
+### [Interpret Results](https://github.com/isobeldaley/categorising-tweets/blob/master/Step%205%20-%20Interpret%20Model.ipynb)
 
+To understand how this model works, a sample of 10 tweets were selected from the test data.  The model was then used to predict the subject category.  The results of this exercise are given below:
+
+![Predicting Subject & Sentiment for Test Data](https://github.com/isobeldaley/categorising-tweets/blob/master/images/pandas_dataframe_test_tweets.png)
+
+The performance of the model appears to be good. On 8 out of 10 occasions the category is correctly predicted.
+
+There are two tweets that are labelled "customer service" where the user (me) has labelled them "contract" and "other". However, upon deeper reading of the tweet, it could be argued that either or both should have been labelled "customer service".
+
+Performance of the sentiment rating is more difficult to judge. The first tweet is clearly negative, and yet has a mildly positive sentiment rating of 0.18. Meanwhile, the majority of tweets have been given a neutral rating. More work may be needed to fine tune this element of the project.
+
+#### On-the-Pulse Measure of Customer Satisfaction
+
+At the outset, it was stated that an objective of this project was to provide mobile networks with an on-the-pulse measure of customer satisfaction.  To understand how this would work, possible customer satisfaction measures are shown benlow, based on the 10 demo tweets considered above:
+
+**Subject**
+
+![On-the-pulse measure of customer satisfcation: Subject](https://github.com/isobeldaley/categorising-tweets/blob/master/images/on_the_pulse_subject.png)
+
+**Sentiment**
+
+![On-the-pulse measure of customer satisfaction: Sentiment](https://github.com/isobeldaley/categorising-tweets/blob/master/images/on_the_pulse_sentiment.png)
 
 ## Recommendations
 
@@ -211,12 +232,21 @@ This approach will enable more effective management of customer communications v
 
 ## Future Work
 
+There are a number of areas that would merit further investigation in the future.  These are detailed below.
 
-### Labelling
+### Labelling & Categorisation
+
+For this project, we had access to 4,377 labelled tweets.  It is highly likely that model performance could be improved if the labelled dataset was significantly expanded.  Given the appropriate time and resources, it is recommended that this is done prior to deploying the model.  
+
+Moreover, it was noted that a large proportion of tweets were categorised as "Other".  This suggests that more detailed categorisation may be needed.  
 
 ### Tweets & Replies
 
+This model considered tweets individually.  However, tweets are often part of a longer conversation between a service agent and a customer.  It may be useful to broaden the model to consider original tweets alongside any replies.  This would help operators understand how many tweets and how much time was required to resolve an issue/question.  This is a crucial component of customer service.  
+
 ### Sentiment Analysis
+
+Finally, it was noted that the sentiment analysis provided by TextBlob was often inaccurate.  An alternative means of modelling sentiment should be considered to improve performance of this element of the model.  
 
 ## Technical Requirements
 
