@@ -2,6 +2,11 @@
 
 ## Abstract
 
+Evidence suggests that customers are dissatisfied with the service provided by the "big four" mobile network operators (EE, O2, Three and Vodafone).  Meanwhile, across multiple industries, customers are increasingly turning to Twitter for support.  Combined, these two observations are the motivating force behind this project.  This project aims to provide mobile network operators with a tool to help them exploit the potential of Twitter, and thereby increase their standing in the eyes of the customer. 
+
+This is achieved through a Natural Language Processing (NLP) model which, categorises tweets according to subject (e.g. network, device, customer service etc.) and sentiment (e.g. positive, neutral, negative).  The objective of this model is to help businesses efficiently handle pre-categorised tweets, access an on-the-pulse measure of customer satisfaction and identify key areas for service improvement.  
+
+
 ## Background
 
 ### Mobile Operators & Customer Satisfaction 
@@ -59,7 +64,7 @@ The emergence of Twitter as a customer care tool therefore provides the major mo
 
 Given the above, the purpose of this project is to provide mobile network operators with a tool to help them exploit the potential of Twitter, and thereby increase their standing in the eyes of the customer.   
 
-This will be achieved through a model which, enables tweets to be categorised according to:
+This will be achieved through an Natural Language Processing (NLP) model which, enables tweets to be categorised according to:
 
 1. **Subject** (e.g. network, device, customer service etc.)
 2. **Sentiment** (e.g. positive, neutral, negative)
